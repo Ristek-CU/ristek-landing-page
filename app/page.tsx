@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Header from "./components/layout/header";
-import HeroSection from "./components/sections/HeroSection";
-import AboutSection from "./components/sections/AboutSection";
-import ProgramSection from "./components/sections/ProgramSection"
-import CollabsSection from "./components/sections/CollabsSection";
+import HeroSection from "./components/sections/heroSection";
+import AboutSection from "./components/sections/aboutSection";
+import ProgramSection from "./components/sections/programSection"
+import CollabsSection from "./components/sections/collabsSection";
 import Footer from "./components/layout/footer";
 
 export default function Home() {
