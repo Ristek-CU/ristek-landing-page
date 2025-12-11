@@ -21,17 +21,16 @@ jobs:
       - name: Deploy to server
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -vvv -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no -o IdentitiesOnly=yes ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "
-            ls -la &&
             cd /root/website/ristek-landing-page &&
-            rm -rf node_modules &&
-            rm -rf dist &&
-            nvm use 22 &&
             git checkout main &&
             git pull &&
+            rm -rf node_modules &&
+            rm -rf .next &&
+            nvm use 22 &&
             npm install &&
             npm run build &&
-            pm2 stop ristek-landing-page &&
-            pm2 del ristek-landing-page &&
+            (pm2 stop ristek-landing-page || true) &&
+            (pm2 del ristek-landing-page || true) &&
             pm2 save &&
             npm run pm2:start
           "
