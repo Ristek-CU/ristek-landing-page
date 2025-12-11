@@ -51,9 +51,9 @@ const EventCard: React.FC = () => (
     <div className="relative mx-auto max-w-7xl pt-[35px]">
         {/* 2. FOTO EVENT */}
         {/* Ukuran foto 275x278 dari figma */}
-        <div className="absolute w-[275px] h-[278px] rounded-2xl shadow-xl z-20"
+        <div className="absolute w-[275px] h-[278px] rounded-2xl shadow-xl z-20 overflow-hidden"
             style={{ left: '70px', top: '-35px' }}>
-            <Image src={eventData.imagePath} alt="Workshop Photo" layout="fill" objectFit="cover" />
+            <Image src={eventData.imagePath} alt="Workshop Photo" fill className="object-cover" />
         </div>
 
         <div className={`relative ${CARD_BG} rounded-[2.5rem] flex shadow-2xl overflow-hidden max-w-5xl mx-auto`}
