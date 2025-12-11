@@ -32,9 +32,12 @@ jobs:
             
             # Remove old images to free up space
             docker image prune -f
+
+            # Build new image
+            docker compose build --no-cache
             
-            # Build and start new container
-            docker compose up -d --build
+            # Start new container
+            docker compose up -d
             
             # Check container status
             docker compose ps
