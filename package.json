@@ -6,8 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "pm2:start": "pm2 --name ristek-landing-page serve dist/ 8299"
+    "lint": "next lint"
   },
   "dependencies": {
     "lucide-react": "^0.553.0",

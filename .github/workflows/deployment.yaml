@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install sshpass
         run: |
@@ -20,17 +20,25 @@ jobs:
 
       - name: Deploy to server
         run: |
-          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -vvv -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no -o IdentitiesOnly=yes ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} "
-            cd /root/website/ristek-landing-page &&
-            git checkout main &&
-            git pull &&
-            rm -rf node_modules &&
-            rm -rf .next &&
-            nvm use 22 &&
-            npm install &&
-            npm run build &&
-            (pm2 stop ristek-landing-page || true) &&
-            (pm2 del ristek-landing-page || true) &&
-            pm2 save &&
-            npm run pm2:start
-          "
+          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no -o IdentitiesOnly=yes ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'ENDSSH'
+            cd /root/website/ristek-landing-page
+            
+            # Pull latest changes
+            git checkout main
+            git pull origin main
+            
+            # Stop and remove existing container (ignore errors if not exists)
+            docker compose down || true
+            
+            # Remove old images to free up space
+            docker image prune -f
+            
+            # Build and start new container
+            docker compose up -d --build
+            
+            # Check container status
+            docker compose ps
+            
+            # Show logs (last 20 lines)
+            docker compose logs --tail=20
+          ENDSSH
