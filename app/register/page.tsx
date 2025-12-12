@@ -86,10 +86,10 @@ export default function RegisterPage() {
     <>
       <Header />
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen   bg-gray-50">
         <div className="relative overflow-hidden"> 
           <div className="absolute inset-0">
-            <div className="relative w-[1400px] h-[250px]">
+            <div className="relative w-[1430px] h-[250px]">
               <Image
                 src="/RegisterIconsAndShapes/Shapes/Rectangle-Reg.svg"
                 alt="Decorative Pattern"
