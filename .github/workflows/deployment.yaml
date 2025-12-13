@@ -1,0 +1,47 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
+      - name: Deploy to server
+        run: |
+          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no -o IdentitiesOnly=yes ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'ENDSSH'
+            cd /root/website/ristek-landing-page
+            
+            # Pull latest changes
+            git checkout main
+            git pull origin main
+            
+            # Stop and remove existing container (ignore errors if not exists)
+            docker compose down || true
+            
+            # Remove old images to free up space
+            docker image prune -f
+
+            # Build new image
+            docker compose build --no-cache
+            
+            # Start new container
+            docker compose up -d
+            
+            # Check container status
+            docker compose ps
+            
+            # Show logs (last 20 lines)
+            docker compose logs --tail=20
+          ENDSSH

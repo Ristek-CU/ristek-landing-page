@@ -11,7 +11,7 @@ const COLORS = {
 const eventData = {
     title: "Pelatihan dasar UI/UX dengan Figma.",
     date: "Januari 2024",
-    imagePath: "/images/collabFoto.png", 
+    imagePath: "/images/collabFoto.png",
     tag: "Workshop",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     buttonText: "Lihat semua event",
