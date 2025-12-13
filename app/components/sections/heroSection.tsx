@@ -1,120 +1,135 @@
 import Image from "next/image";
-
-// BAGIAN: PATH GALERI 
-const IMAGES = {
-    img1: "/images/jumbotron/hero-img-1.png",
-    img2: "/images/jumbotron/hero-img-1.png",
-    img3: "/images/jumbotron/hero-img-1.png",
-    img4: "/images/jumbotron/hero-img-1.png",
-    img5: "/images/jumbotron/hero-img-1.png",
-    img6: "/images/jumbotron/hero-img-1.png",
+ 
+const COLORS = {
+  primaryCyan: "#00c6e8",
+  primaryTeal: "#14b8a6",
+  darkCyan: "#009FC4",
+  textDark: "#1f2937",
 };
-
-// BAGIAN: DEKORATIF SHAPES
-const SHAPE_PATHS = {
-    cornerTopRight: "/shapes/hero-top-right.svg",
-    cornerBottomLeft: "/shapes/hero-bottom-left.svg",
-    tealBlob: "/shapes/blob_hijau.svg",
-    orangeBlob: "/shapes/blob_orange.svg",
+ 
+const ASSETS = { 
+  textSvg: "/hero/text-highlight.svg",
+ 
+  logoSvg: "/images/jumbotron/hero-ristek.svg",
+  headerSvg: "/images/jumbotron/hero-header.svg",
+ 
 };
-
-// BAGIAN: SPECIAL TEXT COLOR 
-const TEXT_GREEN = "text-teal-600";
-const TEXT_CYAN = "text-cyan-600";
-
-// MAIN CONTENT!
-export default function HeroSection() {
-    return (
-        <section className="relative w-full overflow-hidden py-24 md:py-32 bg-white">
-
-            {/* 1. DEKORASI BIRU (Kanan Atas)*/}
-            <div className="absolute -top-0 -right-0 w-[121] h-[121]  ">
-                <Image
-                    src={SHAPE_PATHS.cornerTopRight}
-                    alt="Decorative Corner Shape Top Right"
-                    fill
-                    className="opacity-90"
-                />
-            </div>
-
-            {/* 2. DEKORASI BIRU  (Kiri Bawah) */}
-            <div className="absolute bottom-0 left-0 w-[121px] h-[121px]">
-                <Image
-                    src={SHAPE_PATHS.cornerBottomLeft}
-                    alt="Decorative Corner Shape Bottom Left"
-                    fill
-                    className="opacity-90"
-                />
-            </div>
-
-            {/* 3. KONTEN UTAMA */}
-            <div className="relative max-w-[1440px] mx-auto px-8 z-10">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-                    {/* KOLOM KIRI: TEKS */}
-                    <div className="lg:pr-10">
-                        <p className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">Menjadi</p>
-                        <h1 className={`text-4xl md:text-5xl font-bold ${TEXT_CYAN} leading-tight`}>Pusat Inovasi</h1>
-                        <h1 className={`text-4xl md:text-5xl font-bold ${TEXT_GREEN} leading-tight mb-6`}> <span className="text-gray-900">dan</span> Penelitian</h1>
-                        <p className="mt-4 text-gray-600 max-w-lg text-lg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-
-                    {/* KOLOM KANAN: GAMBAR DAN DEKORASI SHAPE */}
-                    <div className="relative h-full min-h-[500px] flex items-center justify-center">
-
-                        {/* DEKORASI SHAPE GREEN --- */}
-                        <div className="absolute -top-10 right-105 w-70 h-70">
-                            <Image
-                                src={SHAPE_PATHS.tealBlob}
-                                alt="Decorative Teal Blob"
-                                fill
-                            />
-                        </div>
-
-                        {/* DEKORASI SHAPE ORANYE */}
-                        <div className="absolute -top-[-190px] left-90 w-82 h-60">
-                            <Image
-                                src={SHAPE_PATHS.orangeBlob}
-                                alt="Decorative Orange Blob"
-                                fill
-                            />
-                        </div>
-
-                        {/* GALERI GAMBAR */}
-                        <div className="relative grid grid-cols-5 auto-rows-min gap-2 w-full max-w-[700px] p-0 z-10">
-                            {/* BARIS KE-1*/}
-                            <div className="col-span-3 h-[127px]">
-                                <Image src={IMAGES.img1} alt="Foto Grup 1" width={324} height={127} className="w-full h-full object-cover rounded-xl shadow-lg" />
-                            </div>
-                            <div className="col-span-2 h-[127px]">
-                                <Image src={IMAGES.img2} alt="Foto Presentasi" width={230} height={127} className="w-full h-full object-cover rounded-xl shadow-lg" />
-                            </div>
-
-                            {/* BARIS KE-2 */}
-                            <div className="col-span-2 h-[78px]">
-                                <Image src={IMAGES.img3} alt="Foto Grup 3" width={257} height={78} className="w-full h-full object-cover rounded-xl shadow-lg" />
-                            </div>
-                            <div className="col-span-3 row-span-2 h-[171px]">
-                                <Image src={IMAGES.img6} alt="Foto Grup Besar" width={299} height={171} className="w-full h-full object-cover rounded-xl shadow-lg" />
-                            </div>
-
-                            {/* BARIS KE-3 */}
-                            <div className="col-span-1 h-[81px]">
-                                <Image src={IMAGES.img4} alt="Foto Kecil 1" width={123} height={81} className="w-full h-full object-cover rounded-xl shadow-lg" />
-                            </div>
-                            <div className="col-span-1 h-[81px]">
-                                <Image src={IMAGES.img5} alt="Foto Kecil 2" width={123} height={81} className="w-full h-full object-cover rounded-xl shadow-lg" />
-                            </div>
-                            <div className="col-span-1 h-[90px]">
-                                {/* JANGAN DIHAPUS > UNTUK GAP */}
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+ 
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: "primary" | "outline";
+  href?: string;
 }
+
+const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = "primary",
+  href = "#",
+}) => {
+  const baseStyle =
+    "px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base rounded-[8px] font-semibold transition-all duration-300 inline-block text-center whitespace-nowrap flex-shrink-0";
+
+  const variantStyle =
+    variant === "primary"
+      ? "text-white shadow-lg hover:shadow-xl hover:scale-105"
+      : "bg-white text-gray-900 border-2 border-cyan-500 hover:bg-cyan-50 hover:text-gray-900 hover:scale-105";
+
+  const gradientStyle =
+    variant === "primary"
+      ? {
+          background: `linear-gradient(90deg, ${COLORS.primaryCyan} 0%, ${COLORS.darkCyan} 100%)`,
+        }
+      : {};
+
+  return (
+    <a
+      href={href}
+      className={`${baseStyle} ${variantStyle}`}
+      style={gradientStyle}
+    >
+      {children}
+    </a>
+  );
+};
+ 
+const GeometricLogo: React.FC = () => (
+  <Image
+    src={ASSETS.logoSvg}
+    alt="Hero Ristek"
+    fill
+    className="object-contain "
+    priority
+  />
+);
+ 
+export default function HeroSection() {
+  return (
+    <section className="relative w-full min-h-screen overflow-hidden bg-linear-to-br from-blue-50 via-white to-teal-50">
+ 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 relative z-10">
+         
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+           
+          <div className="space-y-4 sm:space-y-6 w-full order-2 lg:order-1 ">
+             
+            <div className="w-full max-w-[280px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[500px] mx-auto lg:mx-0">
+              <Image 
+                src={ASSETS.headerSvg} 
+                alt="Hero Header" 
+                width={500}
+                height={300}
+                className="w-full h-auto object-contain"
+                priority
+              />
+            </div>
+ 
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-xl leading-relaxed text-center lg:text-left mx-auto lg:mx-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+ 
+            <div className=" flex flex-row flex-nowrap gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center lg:justify-start items-center">
+              <Button variant="outline" href="#partner">
+                Partner With Us
+              </Button>
+              <Button variant="primary" href="/app/register">
+                Register As Client
+              </Button>
+            </div>
+          </div>
+ 
+          <div className="relative flex items-center justify-center w-full order-1 lg:order-2">
+             
+            <div className="relative 
+            w-[300px] h-[300px] sm:w-[300px] sm:h-[300px] 
+            md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px]">
+               
+              <div className="absolute inset-0 flex items-center justify-center hover:scale-165 transition-transform duration-800">
+                <GeometricLogo />
+              </div>
+ 
+              <div className="absolute inset-0 bg-gradient-radial from-cyan-200/30 to-transparent blur-3xl -z-10" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+ 
+      <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg
+          className="w-6 h-6 text-gray-400"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </section>
+  );
+}
+
+export { HeroSection };
