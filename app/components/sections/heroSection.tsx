@@ -92,7 +92,7 @@ export default function HeroSection() {
               <Button variant="outline" href="#partner">
                 Partner With Us
               </Button>
-              <Button variant="primary" href="/app/register">
+              <Button variant="primary" href="/register">
                 Register As Client
               </Button>
             </div>
