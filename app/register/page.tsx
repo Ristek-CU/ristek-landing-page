@@ -1,4 +1,5 @@
 "use client";
+// fix: adjustment based on review
 
 import Image from "next/image";
 import { useState } from "react";
