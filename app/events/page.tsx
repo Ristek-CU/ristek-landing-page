@@ -11,7 +11,7 @@ const eventsData = [
     id: 1,
     category: "Workshop",
     title: "Pelatihan dasar UI/UX dengan Figma.",
-    date: "Januari 2024",
+    date: "Januari 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/events-page-shapes/mask-group.svg"
   },
@@ -19,7 +19,7 @@ const eventsData = [
     id: 2,
     category: "Competition",
     title: "Lomba website untuk inovasi teknologi.",
-    date: "Mei 2024",
+    date: "Mei 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/events-page-shapes/mask-group.svg"
   },
@@ -27,7 +27,7 @@ const eventsData = [
     id: 3,
     category: "Company Visit",
     title: "Kunjungan ke kantor startup terkemuka.",
-    date: "Juni 2024",
+    date: "Juni 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/events-page-shapes/mask-group.svg"
   },
@@ -35,7 +35,7 @@ const eventsData = [
     id: 4,
     category: "Learning Community",
     title: "Diskusi tren terbaru dalam AI.",
-    date: "November 2024",
+    date: "November 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/events-page-shapes/mask-group.svg"
   },
@@ -43,7 +43,7 @@ const eventsData = [
     id: 5,
     category: "Workshop",
     title: "Belajar membuat aplikasi dengan Flutter.",
-    date: "Desember 2024",
+    date: "Desember 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/events-page-shapes/mask-group.svg"
   },
