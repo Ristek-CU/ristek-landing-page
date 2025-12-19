@@ -106,8 +106,8 @@ export default function StepTwoForm({
           rows={5}
           placeholder="Jelaskan skema kemitraan yang Anda harapkan dalam 200 kata atau kurang"
           className={`w-full px-3 md:px-4 py-2 md:py-2.5 text-xs md:text-sm text-gray-900 placeholder-gray-400 border rounded-md focus:outline-none focus:ring-1 resize-none ${errors.deskripsiProyek
-              ? "border-red-500 focus:ring-red-500"
-              : "border-gray-300 focus:ring-cyan-500 focus:border-cyan-500"
+            ? "border-red-500 focus:ring-red-500"
+            : "border-gray-300 focus:ring-cyan-500 focus:border-cyan-500"
             }`}
         />
         {errors.deskripsiProyek && (
@@ -189,7 +189,7 @@ export default function StepTwoForm({
           <svg className="w-3 h-3 md:w-3.5 md:h-3.5 text-gray-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
           </svg>
-          <span>Jika Anda memperkirakan proyek selesai pada 1 Februari 2025, Anda dapat memasukkan 01/02/24</span>
+          <span>Jika Anda memperkirakan proyek selesai pada 1 Februari 2025, Anda dapat memasukkan 01/02/25</span>
         </p>
       </div>
 
