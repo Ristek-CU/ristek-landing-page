@@ -46,7 +46,7 @@ export function Header() {
                 </nav>
 
                 <div className="hidden md:flex space-x-3 lg:space-x-4 items-center shrink-0">
-                    <Link href="#partner">
+                    <Link href="/partner">
                         <button className="px-4 py-2 lg:px-6 lg:py-3 text-xs lg:text-sm font-semibold border-2 border-cyan-500 text-black rounded-lg hover:bg-cyan-50 transition duration-200">
                             Partner With Us
                         </button>
