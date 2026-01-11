@@ -2,6 +2,11 @@
   "name": "ristek-landing-page",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Research and Technology Division",
+    "url": "https://ristek.sga-cakrawala.org",
+    "email": "ristek.sga@cakrawala.ac.id"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
