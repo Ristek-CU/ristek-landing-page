@@ -13,7 +13,7 @@ const eventsData = [
     title: "Pelatihan dasar UI/UX dengan Figma.",
     date: "Januari 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/events-page-shapes/mask-group.svg"
+    image: "/events-page-shapes/sga.jpeg"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const eventsData = [
     title: "Lomba website untuk inovasi teknologi.",
     date: "Mei 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/events-page-shapes/mask-group.svg"
+    image: "/events-page-shapes/sga.jpeg"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const eventsData = [
     title: "Kunjungan ke kantor startup terkemuka.",
     date: "Juni 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/events-page-shapes/mask-group.svg"
+    image: "/events-page-shapes/sga.jpeg"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const eventsData = [
     title: "Diskusi tren terbaru dalam AI.",
     date: "November 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/events-page-shapes/mask-group.svg"
+    image: "/events-page-shapes/sga.jpeg"
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const eventsData = [
     title: "Belajar membuat aplikasi dengan Flutter.",
     date: "Desember 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/events-page-shapes/mask-group.svg"
+    image: "/events-page-shapes/sga.jpeg"
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const eventsData = [
     title: "Lomba desain UI/UX untuk Smart City.",
     date: "Januari 2025",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/events-page-shapes/mask-group.svg"
+    image: "/events-page-shapes/sga.jpeg"
   }
 ];
 
