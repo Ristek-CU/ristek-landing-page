@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // Temporary team photo - ganti dengan path asli nanti
-const TEAM_PHOTO = "/events-page-shapes/mask-group.svg";
+const TEAM_PHOTO = "/events-page-shapes/sga.jpeg";
 
 export default function CtaSection() {
   const roles = [
@@ -14,7 +14,7 @@ export default function CtaSection() {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-      
+
       {/* HEADLINE DI ATAS CARD */}
       <div className="mb-8 md:mb-10 lg:mb-12 text-center px-4">
         <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
@@ -36,7 +36,7 @@ export default function CtaSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        
+
         {/* ============================================ */}
         {/* MAIN CONTAINER WITH BACKGROUND IMAGE */}
         {/* ============================================ */}
@@ -50,12 +50,12 @@ export default function CtaSection() {
             backgroundImage: "url('/about-page-shapes/bg-cta.svg')"
           }}
         >
-          
+
           {/* ============================================ */}
           {/* RESPONSIVE LAYOUT: Mobile Stack, Desktop Grid */}
           {/* ============================================ */}
           <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-10 items-center">
-            
+
             {/* ============================================ */}
             {/* IMAGE - Atas di Mobile, Kanan di Desktop */}
             {/* ============================================ */}
@@ -76,7 +76,7 @@ export default function CtaSection() {
             {/* TEXT CONTENT - Bawah di Mobile, Kiri di Desktop */}
             {/* ============================================ */}
             <div className="w-full lg:col-span-7 text-white space-y-4 md:space-y-5 order-2 lg:order-1">
-              
+
               {/* SUB-HEADLINE */}
               <h2 className="font-semibold text-base sm:text-lg md:text-xl lg:text-2xl leading-tight">
                 <span className="block">
@@ -90,8 +90,8 @@ export default function CtaSection() {
 
               {/* DESKRIPSI PARAGRAF */}
               <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed max-w-2xl">
-                RISTEK adalah tempat bagi mahasiswa yang ingin berkembang di bidang teknologi. 
-                Bergabung dengan kami, rasakan pengalaman hands-on, belajar dari project nyata, 
+                RISTEK adalah tempat bagi mahasiswa yang ingin berkembang di bidang teknologi.
+                Bergabung dengan kami, rasakan pengalaman hands-on, belajar dari project nyata,
                 dan berkontribusi dalam proyek yang bermanfaat!
               </p>
 
